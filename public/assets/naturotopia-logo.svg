@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" fill="none">
+  <rect x="4" y="8" width="40" height="40" rx="10" fill="#1b4332"/>
+  <path d="M24 16C24 16 16 23 16 31C16 35.4183 19.5817 39 24 39C28.4183 39 32 35.4183 32 31C32 23 24 16 24 16Z" fill="#52b788"/>
+  <path d="M24 22V36M24 28L20 25M24 31L28 28" stroke="#1b4332" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="38" r="1.5" fill="#d8f3dc"/>
+  <text x="54" y="32" font-family="Plus Jakarta Sans, sans-serif" font-size="20" font-weight="800" fill="#1b4332" letter-spacing="-0.5">Naturo<tspan fill="#40916c">topia</tspan></text>
+  <text x="54" y="44" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="600" fill="#52796f" letter-spacing="1.5">NSA PRODUCTS &amp; AGRO SOLUTIONS</text>
+</svg>
