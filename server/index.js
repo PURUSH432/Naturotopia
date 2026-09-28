@@ -6,7 +6,7 @@ import bcrypt from "bcryptjs";
 import { pool } from "./db.js";
 import { initializeDatabase } from "./seed.js";
 
-const app = express();
+export const app = express();
 const port = Number(process.env.PORT || 3001);
 const sessionSecret = process.env.SESSION_SECRET || "development-only-secret";
 
@@ -358,14 +358,16 @@ app.post("/api/orders", requireUser, async (request, response) => {
   }
 });
 
-initializeDatabase()
-  .then(() => {
-    app.listen(port, () =>
-      console.log(`Naturotopia API listening on http://localhost:${port}`),
-    );
-  })
-  .catch(async (error) => {
-    console.error("Could not initialize PostgreSQL:", error.message);
-    await pool.end();
-    process.exit(1);
-  });
+if (process.env.NODE_ENV !== "production" || !process.env.VERCEL) {
+  initializeDatabase()
+    .then(() => {
+      app.listen(port, () =>
+        console.log(`Naturotopia API listening on http://localhost:${port}`),
+      );
+    })
+    .catch(async (error) => {
+      console.error("Could not initialize PostgreSQL:", error.message);
+      await pool.end();
+      process.exit(1);
+    });
+}

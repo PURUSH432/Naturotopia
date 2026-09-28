@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"npm run server\" \"vite\"",
     "server": "node server/index.js",
     "db:setup": "node server/setup-db.js",
     "seed": "node server/seed.js",
@@ -16,13 +16,15 @@
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "canvas-confetti": "^1.9.4",
+    "concurrently": "^10.0.5",
     "cors": "^2.8.6",
     "dotenv": "^18.0.4",
     "express": "^5.2.1",
     "lucide-react": "^1.48.0",
     "pg": "^8.23.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "serverless-http": "^4.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.18",
